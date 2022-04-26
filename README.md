@@ -40,7 +40,7 @@ Open the localhost URL in your browser and navigate to the Enterspeed examples.
 ## Inspiration and links
 This is just the tip of the iceberg – the possibilities are many, but from our perspective working with real data during your design and development process is a gamechanger!
 
-You can read more about Headless Storybook here: https://storybook.js.org/addons/storybook-addon-headless
+You can read more about Headless Storybook at https://storybook.js.org/addons/storybook-addon-headless and make sure to check out the addons: https://storybook.js.org/addons/
 
 We also recommend reading Brad Frosts take on Atomic Design and Storybook here: https://bradfrost.com/blog/post/atomic-design-and-storybook/
 
