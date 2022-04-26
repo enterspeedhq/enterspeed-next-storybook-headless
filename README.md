@@ -18,4 +18,8 @@ You can view a demo of the live site here: Coming soon.
 
 ## How to
 
-Coming soon.
+Create a file called ".env.local" and insert your environment API key like this:
+
+`ENTERSPEED_PRODUCTION_ENVIRONMENT_API_KEY=[YOUR-ENTERSPEED-API-KEY-HERE]`
+
+**:warning: For a production environment, this should be injected on build time.**
