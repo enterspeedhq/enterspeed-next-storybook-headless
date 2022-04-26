@@ -1,16 +1,12 @@
 # Enterspeed demo: Storybook Headless
 This is an Enterspeed example project using **Next.js** and **Storybook** to display data from **Enterspeed**.
 
-These days design systems is all the rage, and when you have a decoupled 7
+These days design systems is all the rage, and when you have a decoupled backend architecture a natural next step is a solid design system for handling your frontend(s)!
 
-This is a simple example of how you can populate and use Storybook with real data from Enterspeed.
-
-Using real data and a component library such as Storybook, provides you and your team with new possibilities for designing and developing better web applications.
-
-## Demo
-You can view a demo of the live site here: Coming soon.
+Using real data and a component library, provides you and your team with new possibilities in the process of designing, developing, testing and now you can give your content work a headstart.
 
 ## How to
+Let's get to it, follow these steps for getting it up and running locally or you can have a look at our demo site: link on the way
 
 ### 1. Create tenant with demo data
 Go to https://app.enterspeed.com/ and login (if you don't have a user you can create one for free).
@@ -39,14 +35,15 @@ Run Storybook:
 
 `npm run storybook`
 
-
+Open the localhost URL in your browser and navigate to the Enterspeed examples.
 
 ## Inspiration and links
+This is just the tip of the iceberg – the possibilities are many, but from our perspective working with real data during your design and development process is a gamechanger!
 
-Read more about Headless Storybook here: https://storybook.js.org/addons/storybook-addon-headless
+You can read more about Headless Storybook here: https://storybook.js.org/addons/storybook-addon-headless
 
-Read Brad Frosts take on Atomic Design and Storybook here: https://bradfrost.com/blog/post/atomic-design-and-storybook/
+We also recommend reading Brad Frosts take on Atomic Design and Storybook here: https://bradfrost.com/blog/post/atomic-design-and-storybook/
 
-See our Umbraco and NExt.js tutorial: https://github.com/enterspeedhq/enterspeed-demo-nextjs
+See our Umbraco and Next.js tutorial at https://github.com/enterspeedhq/enterspeed-demo-nextjs, visit us at https://www.enterspeed.com/ and https://www.linkedin.com/company/enterspeed/.
 
-Visit us at https://www.enterspeed.com/ and https://www.linkedin.com/company/enterspeed/.
+Questions, input or anything else please reach out! :heart:
