@@ -1,0 +1,10 @@
+{
+  "sourceEntityTypes": [
+    "contentPage",
+    "product",
+    "home"
+  ],
+  "properties": {
+    "url": "{url}"
+  }
+}

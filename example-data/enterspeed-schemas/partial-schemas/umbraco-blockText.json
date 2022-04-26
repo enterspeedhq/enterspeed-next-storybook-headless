@@ -1,0 +1,7 @@
+{
+  "alias": "umbraco-blockText",
+  "properties": {
+    "text": "{item.content.text}",
+    "alias": "{item.contentType}"
+  }
+}
