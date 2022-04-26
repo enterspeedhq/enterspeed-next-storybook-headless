@@ -1,12 +1,10 @@
 import React from 'react'
 import { withHeadless } from 'storybook-addon-headless'
 
-import EsExample from './es-example';
-
-console.log(process.env.STORYBOOK_ENTERSPEED_ENVIRONMENT_API_KEY);
+import EsStatus from './es-status';
 
 export default {
-  title: '  Enterspeed',
+  title: 'Enterspeed',
   decorators: [
     withHeadless({
       restful: {
@@ -29,5 +27,5 @@ export default {
 
 // Headless data is second parameter, first parameter is "args" e.g.: https://github.com/ArrayKnight/storybook-addon-headless/blob/master/src/examples/restful.stories.tsx
 export const Status = ( args, { data } ) => {
-  return data?.EsExampleData ? <EsExample {...data} /> : null
+  return data?.EsExampleData ? <EsStatus {...data} /> : null
 }
