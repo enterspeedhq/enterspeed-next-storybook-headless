@@ -8,8 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "build-static-webapp":"expo build:web"
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@emotion/react": "^11.4.1",
