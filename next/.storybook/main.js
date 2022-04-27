@@ -9,5 +9,6 @@ module.exports = {
     "storybook-addon-headless",
     "@storybook/addon-interactions"
   ],
+  staticDirs: ['../public'],
   "framework": "@storybook/react"
 }
