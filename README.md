@@ -1,17 +1,17 @@
 # Enterspeed demo: Storybook Headless
 This is an Enterspeed example project using **Next.js** and **Storybook** to display data from **Enterspeed**.
 
-These days design systems is all the rage, and when you have a decoupled backend architecture a natural next step is a solid design system for handling your frontend(s)!
+These days design systems are all the rage - and when you have a decoupled backend architecture a natural next step is a solid design system for handling your frontend(s)!
 
-Using real data and a component library, provides you and your team with new possibilities in the process of designing, developing, testing and now you can give your content work a headstart.
+Using real data and a component library, provides you and your team with new possibilities in the process of designing, development and testing. And now you can give your content work a headstart as well.
 
 ## How to
-Let's get to it, follow these steps for getting it up and running locally or you can have a look at our demo site: https://enterspeed-next-storybook.netlify.app/
+Let's get to it. Follow these steps to get it up and running locally - or have a look at our demo site: https://enterspeed-next-storybook.netlify.app/
 
 ### 1. Create tenant with demo data
 Go to https://app.enterspeed.com/ and login (if you don't have a user you can create one for free).
 
-Create a new `tenant` by clicking the button in the header, tick `Pre-populate with demo data` so we have some data and schemas to work with.
+Create a new `tenant` by clicking the button in the header, tick `Pre-populate with demo data` so you'll have some data and schemas to work with.
 
 ### 2. Clone repo
 Now lets get Storybook running locally; in your terminal clone this repo:
@@ -36,6 +36,10 @@ Run Storybook:
 `npm run storybook`
 
 Open the localhost URL in your browser and navigate to the Enterspeed examples.
+
+## Figma and Storybook
+
+Taking it further, there is a brand new (April 2022) plugin for Figma that allows designers to view Storybook stories directly in the design file. Besides allowing designers to be in sync with production, combined with real data, this this provides the designer with data documentation at hand.
 
 ## Inspiration and links
 This is just the tip of the iceberg – the possibilities are many, but from our perspective working with real data during your design and development process is a gamechanger!
