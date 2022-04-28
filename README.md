@@ -26,7 +26,7 @@ Navigate to the `next` folder and run:
 ### 4. Add environment key
 Create a file called `.env.local` in the `next` folder and insert your environment API key like this:
 
-`ENTERSPEED_PRODUCTION_ENVIRONMENT_API_KEY=[YOUR-ENTERSPEED-API-KEY-HERE]`
+`STORYBOOK_ENTERSPEED_ENVIRONMENT_API_KEY=[YOUR-ENTERSPEED-API-KEY-HERE]`
 
 **:warning: For a production environment, this should be injected on build time.**
 
