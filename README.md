@@ -16,7 +16,7 @@ Create a new `tenant` by clicking the button in the header, tick `Pre-populate w
 ### 2. Clone repo
 Now lets get Storybook running locally; in your terminal clone this repo:
 
-`git clone git@github.com:enterspeedhq/enterspeed-demo-nextjs.git`
+`git clone git@github.com:enterspeedhq/enterspeed-next-storybook-headless.git`
 
 ### 3. Install packages
 Navigate to the `next` folder and run:
