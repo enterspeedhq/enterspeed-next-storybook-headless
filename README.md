@@ -6,7 +6,7 @@ These days design systems is all the rage, and when you have a decoupled backend
 Using real data and a component library, provides you and your team with new possibilities in the process of designing, developing, testing and now you can give your content work a headstart.
 
 ## How to
-Let's get to it, follow these steps for getting it up and running locally or you can have a look at our demo site: link on the way
+Let's get to it, follow these steps for getting it up and running locally or you can have a look at our demo site: https://enterspeed-next-storybook.netlify.app/
 
 ### 1. Create tenant with demo data
 Go to https://app.enterspeed.com/ and login (if you don't have a user you can create one for free).
