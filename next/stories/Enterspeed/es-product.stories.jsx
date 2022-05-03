@@ -4,7 +4,8 @@ import { withHeadless } from 'storybook-addon-headless'
 import EsProduct from './es-product';
 
 export default {
-  title: 'Enterspeed',
+  title: 'Enterspeed/Examples',
+  component: EsProduct,
   decorators: [
     withHeadless({
       restful: {
@@ -18,9 +19,9 @@ export default {
   parameters: {
     headless: {
       EsExampleData: {
-            query: '/products/the-flying-trunk-fairy-tales-by-h-c-andersen/',
-            autoFetchOnInit: true,
-        }
+        query: '/products/the-flying-trunk-fairy-tales-by-h-c-andersen/',
+        autoFetchOnInit: true,
+      }
     }
   }
 };

@@ -4,7 +4,8 @@ import { withHeadless } from 'storybook-addon-headless'
 import EsStatus from './es-status';
 
 export default {
-  title: 'Enterspeed',
+  title: 'Enterspeed/Examples',
+  component: EsStatus,
   decorators: [
     withHeadless({
       restful: {
@@ -17,7 +18,7 @@ export default {
   ],
   parameters: {
     headless: {
-      EsExampleData: {
+      EsStatusData: {
             query: '/',
             autoFetchOnInit: true,
         }
@@ -27,5 +28,5 @@ export default {
 
 // Headless data is second parameter, first parameter is "args" e.g.: https://github.com/ArrayKnight/storybook-addon-headless/blob/master/src/examples/restful.stories.tsx
 export const Status = ( args, { data } ) => {
-  return data?.EsExampleData ? <EsStatus {...data} /> : null
+  return data?.EsStatusData ? <EsStatus {...data} /> : null
 }

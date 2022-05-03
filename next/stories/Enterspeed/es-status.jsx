@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default function EsStatus({ EsExampleData }) {
+export default function EsStatus({ EsStatusData }) {
   return (
-    <h1>Status: {EsExampleData.meta.status}</h1>
+    <h1>Status: {EsStatusData.meta.status}</h1>
   );
 }
