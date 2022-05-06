@@ -3,10 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -15,16 +11,15 @@
     "@emotion/styled": "^11.3.0",
     "@fontsource/gentium-book-basic": "^4.5.0",
     "@fontsource/henny-penny": "^4.5.0",
-    "@storybook/addon-docs": "^5.3.21",
+    "@storybook/addon-docs": "^6.4.22",
     "framer-motion": "^4.1.17",
-    "next": "^12.1.5",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
     "@storybook/addon-actions": "^6.4.22",
-    "@storybook/addon-essentials": "^5.3.21",
+    "@storybook/addon-essentials": "^6.4.22",
     "@storybook/addon-interactions": "^6.4.22",
     "@storybook/addon-links": "^6.4.20",
     "@storybook/react": "^6.1.21",
