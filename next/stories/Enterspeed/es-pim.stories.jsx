@@ -23,7 +23,7 @@ export default {
   parameters: {
     headless: {
       EsPimData: {
-        query: '?handle=pimProduct',
+        query: '?handle=MapVacationHouses',
         autoFetchOnInit: true,
       }
     }
