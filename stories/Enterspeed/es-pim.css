@@ -1,30 +1,197 @@
-.storybook-button {
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  border: 0;
-  border-radius: 3em;
+.vacation-houses-wrapper * {
+  box-sizing: border-box;
+}
+
+.vacation-houses-wrapper p {
+  margin: 0;
+}
+
+.vacation-houses-wrapper {
+  display: flex;
+  font-family: 'Helvetica';
+  gap: 24px;
+  line-height: 150%;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 736px) {
+  .vacation-houses-wrapper {
+    flex-direction: row;
+    gap: 0;
+  }
+}
+
+.vacation-houses {
+  display: inline-flex;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  gap: 24px;
+  order: 2;
+}
+
+@media screen and (min-width: 736px) {
+  .vacation-houses {
+    flex-basis: 716px;
+    gap: 40px;
+    order: 1;
+  }
+}
+
+.vacation-house-card {
+  background: #fff;
+  border-radius: 0.6em;
+  box-shadow: 0 13px 27px -5px hsla(240, 30.1%, 28%, 0.25), 0 8px 16px -8px hsla(0, 0%, 0%, 0.3), 0 -6px 16px -6px hsla(0, 0%, 0%, 0.03);
   cursor: pointer;
-  display: inline-block;
-  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: hidden;
+  position: relative;
+  transition: all ease 200ms;
+  width: 100%;
 }
-.storybook-button--primary {
-  color: white;
-  background-color: #1ea7fd;
+
+@media screen and (min-width: 736px) {
+  .vacation-house-card {
+    width: 320px;
+    flex-grow: 0;
+  }
 }
-.storybook-button--secondary {
-  color: #333;
-  background-color: transparent;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+
+.vacation-house-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 13px 40px -5px hsla(240, 30.1%, 28%, 0.12), 0 8px 32px -8px hsla(0, 0%, 0%, 0.14), 0 -6px 32px -6px hsla(0, 0%, 0%, 0.02);
 }
-.storybook-button--small {
-  font-size: 12px;
-  padding: 10px 16px;
+
+.vacation-house-card__fav-icon,
+.vacation-house-card__fav-icon--active {
+  background-color: rgba(255, 255, 255, .8);
+  background-image: url("/vacation-houses/vacation-houses-fav-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 8px 8px;
+  background-size: 24px;
+  border-radius: 8px;
+  display: flex;
+  height: 40px;
+  padding: 8px;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  width: 40px;
 }
-.storybook-button--medium {
+
+.vacation-house-card__fav-icon:hover,
+.vacation-house-card__fav-icon--active {
+  background-color: rgba(255, 255, 255, 1);
+  background-image: url("/vacation-houses/vacation-houses-fav-icon-active.svg");
+}
+
+.vacation-house-card__image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.vacation-house-card__image img {
+  width: 100%;
+}
+
+@media screen and (min-width: 736px) {
+  .vacation-house-card__image {
+    height: 144px;
+  }
+
+  .vacation-house-card__image img {
+    width: auto;
+  }
+}
+
+.vacation-house-card__headline {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  color: #2E2E2E;
+  margin: 4px 0px;
+  transition: all ease-in 100ms;
+}
+
+.vacation-house-card__address {
+  font-weight: 300;
   font-size: 14px;
-  padding: 11px 20px;
+  line-height: 100%;
+  color: #A9A9A9;
+  margin: 8px 0px;
 }
-.storybook-button--large {
-  font-size: 16px;
-  padding: 12px 24px;
+
+.vacation-house-card__lead {
+  color: #6F6F6F;
+  flex-grow: 1;
+  padding: 24px 0;
+}
+
+.vacation-house-card__content {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 16px;
+}
+
+.vacation-house-card__footer {
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+  line-height: 100%;
+  position: relative;
+}
+
+.vacation-house-card__price {
+  align-items: center;
+  color: #1356FB;
+  display: flex;
+  font-weight: 300;
+  margin-left: 4px;
+}
+
+.vacation-house-card__stay-type {
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  color: #6F6F6F;
+  margin-left: 4px;
+}
+
+.vacation-house-card__number {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 8px;
+  position: absolute;
+  right: 0;
+  background: #DBE6FE;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  color: #6F6F6F;
+}
+
+.vacation-houses__map {
+  background-image: url('/vacation-houses/vacation-houses-map.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 16px;
+  flex-basis: auto;
+  flex-grow: 1;
+  height: 300px;
+  order: 1;
+}
+
+@media screen and (min-width: 736px) {
+  .vacation-houses__map {
+    height: auto;
+    margin-top: 0;
+    max-width: 791px;
+    order: 2;
+  }
 }

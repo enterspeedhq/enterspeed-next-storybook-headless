@@ -1,43 +1,10 @@
 import React from "react";
 import "./es-pim.css";
 
-function ListItem(props) {
-  console.log(props);
-
-  return <li>{props.value}</li>;
-}
-
-function NumberList(props) {
-  const numbers = props.numbers;
-
-  return (
-    <ul>
-      {numbers.map((number) => (
-        <ListItem key={number.toString()} value={number} />
-      ))}
-    </ul>
-  );
-}
-
-const numbers = [1, 2, 3, 4, 5];
-
-function ProductList(props) {
-  const products = props.products;
-
-  return (
-    <ul>
-      {products.map((product, index) => (
-        <ListItem key={index.toString()} value={product} />
-      ))}
-    </ul>
-  );
-}
-
 /**
- * This is the raw data as stored in the PIM.
+ * VacationHouseList
  */
 export default function EsPim({ EsPimData }) {
-  // const VacationHouses = [1, 2, 3, 4, 5];
   const VacationHouses = EsPimData.views.enterspeedVacationHouses.cmsProducts;
 
   const VacationHouseList = VacationHouses.map((vacationHouse, index) => {
@@ -54,37 +21,57 @@ export default function EsPim({ EsPimData }) {
       stayType,
     } = vacationHouse[0];
     return (
-      <div
-        style={{
-          padding: "16px",
-          backgroundColor: "lightblue",
-          marginBottom: "32px",
-        }}
+      <VacationCard
         key={index.toString()}
-      >
-        <div>{address}</div>
-        <div>{currency}</div>
-        <div>{headline}</div>
-        <div>{image}</div>
-        <div>{lat}</div>
-        <div>{lead}</div>
-        <div>{lon}</div>
-        <div>{number}</div>
-        <div>{price}</div>
-        <div>{stayType}</div>
-      </div>
+        img={image}
+        headline={headline}
+        address={address}
+        lead={lead}
+        currency={currency}
+        price={price}
+        stayType={stayType}
+        number={number}
+        favourite={index.toString()}
+      />
     );
   });
 
   return (
     <>
-      {/* <h1>
-        {EsPimData.views.enterspeedVacationHouses.cmsProducts[0][0].headline}
-      </h1>/
-      <NumberList numbers={numbers} />
-      <pre>{JSON.stringify(EsPimData, null, 2)}</pre>
-      <pre>{VacationHouses[0][0].name}</pre> */}
-      {VacationHouseList}
+      <div className='vacation-houses-wrapper'>
+        <div className='vacation-houses'>
+            {VacationHouseList}
+          </div>
+          <div className='vacation-houses__map'>
+
+          </div>
+      </div>
     </>
   );
+}
+
+class VacationCard extends React.Component {
+  render() {
+    return(
+        <article className="vacation-house-card">
+          <div className={this.props.favourite == 0 ? "vacation-house-card__fav-icon--active" : "vacation-house-card__fav-icon"}></div>
+          <div className="vacation-house-card__image">
+            <img src={"/vacation-houses/" + this.props.img} />
+          </div>
+          <section className="vacation-house-card__content">
+            <header className="vacation-house-card__header">
+              <h2 className="vacation-house-card__headline">{this.props.headline}</h2>
+              <h3 className="vacation-house-card__address">{this.props.address}</h3>
+            </header>
+            <p className="vacation-house-card__lead">{this.props.lead}</p>
+            <footer className="vacation-house-card__footer">
+              <img src="/vacation-houses/vacation-houses-price-icon.svg" width="16" height="16" />
+              <span className="vacation-house-card__price">{this.props.price}</span>
+              <span className="vacation-house-card__stay-type">/ {this.props.stayType}</span>
+              <span className="vacation-house-card__number">{this.props.number}</span>
+            </footer>
+          </section>
+        </article>
+    )
+  }
 }
