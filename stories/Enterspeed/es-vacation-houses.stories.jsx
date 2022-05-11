@@ -1,7 +1,7 @@
 import React from 'react';
 import { withHeadless } from 'storybook-addon-headless'
 
-import EsPim from './es-pim';
+import EsVacationHouseData from './es-vacation-houses';
 
 export default {
   /* 👇 The title prop is optional.
@@ -9,7 +9,7 @@ export default {
   * to learn how to generate automatic titles
   */
   title: 'Enterspeed/PIM',
-  component: EsPim,
+  component: EsVacationHouseData,
   decorators: [
     withHeadless({
       restful: {
@@ -22,7 +22,7 @@ export default {
   ],
   parameters: {
     headless: {
-      EsPimData: {
+      EsVacationHouseData: {
         query: '?handle=MapVacationHouses',
         autoFetchOnInit: true,
       }
@@ -30,7 +30,6 @@ export default {
   }
 };
 
-// Headless data is second parameter, first parameter is "args" e.g.: https://github.com/ArrayKnight/storybook-addon-headless/blob/master/src/examples/restful.stories.tsx
-export const Pim = ( args, { data } ) => {
-  return data?.EsPimData ? <EsPim {...data} /> : null
+export const VacationHouses = ( args, { data } ) => {
+  return data?.EsVacationHouseData ? <EsVacationHouseData {...data} /> : null
 }

@@ -1,11 +1,11 @@
 import React from "react";
-import "./es-pim.css";
+import "./es-vacation-houses.css";
 
 /**
  * VacationHouseList
  */
-export default function EsPim({ EsPimData }) {
-  const VacationHouses = EsPimData.views.enterspeedVacationHouses.cmsProducts;
+export default function EsVacationHouse({ EsVacationHouseData }) {
+  const VacationHouses = EsVacationHouseData.views.enterspeedVacationHouses.cmsProducts;
 
   const VacationHouseList = VacationHouses.map((vacationHouse, index) => {
     const {
