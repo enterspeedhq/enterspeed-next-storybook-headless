@@ -37,24 +37,53 @@
   }
 }
 
-.vacation-house-card {
+.vacation-house-card,
+.vacation-house-map-card {
   background: #fff;
   border-radius: 0.6em;
   box-shadow: 0 13px 27px -5px hsla(240, 30.1%, 28%, 0.25), 0 8px 16px -8px hsla(0, 0%, 0%, 0.3), 0 -6px 16px -6px hsla(0, 0%, 0%, 0.03);
   cursor: pointer;
   display: flex;
-  flex-direction: column;
   flex-grow: 1;
-  overflow: hidden;
   position: relative;
   transition: all ease 200ms;
   width: 100%;
 }
 
+.vacation-house-card {
+  flex-direction: column;
+}
+
+.vacation-house-map-card {
+  flex-direction: row;
+  padding: 8px;
+}
+
+.vacation-house-map-card::after {
+  background-color: #fff;
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -24px;
+  display: block;
+  width: 24px;
+  height: 24px;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
 @media screen and (min-width: 736px) {
-  .vacation-house-card {
+  .vacation-house-card,
+  .vacation-house-map-card {
     width: 320px;
     flex-grow: 0;
+  }
+
+  .vacation-house-map-card {
+    left: 50%;
+    margin-top: -160px;
+    margin-left: -160px;
+    position: absolute;
+    top: 50%;
   }
 }
 
@@ -91,8 +120,13 @@
   object-fit: cover;
 }
 
-.vacation-house-card__image img {
+.vacation-house-card__image img,
+.vacation-house-map-card__image img {
   width: 100%;
+}
+
+.vacation-house-map-card__image {
+  display: inline-flex;
 }
 
 @media screen and (min-width: 736px) {
@@ -105,16 +139,25 @@
   }
 }
 
-.vacation-house-card__headline {
+.vacation-house-card__headline,
+.vacation-house-map-card__headline {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 100%;
   color: #2E2E2E;
   margin: 4px 0px;
   transition: all ease-in 100ms;
 }
 
-.vacation-house-card__address {
+@media screen and (min-width: 736px) {
+  .vacation-house-card__headline,
+  .vacation-house-map-card__headline {
+    font-size: 24px;
+  }
+}
+
+.vacation-house-card__address,
+.vacation-house-map-card__address {
   font-weight: 300;
   font-size: 14px;
   line-height: 100%;
@@ -128,17 +171,27 @@
   padding: 24px 0;
 }
 
-.vacation-house-card__content {
+.vacation-house-card__content,
+.vacation-house-map-card__content {
   align-items: stretch;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+}
+
+.vacation-house-card__content {
   padding: 16px;
 }
 
-.vacation-house-card__footer {
+.vacation-house-map-card__content {
+  padding: 8px;
+}
+
+.vacation-house-card__footer,
+.vacation-house-map-card__footer {
   align-items: center;
   display: flex;
+  flex-grow: 1;
   font-size: 14px;
   line-height: 100%;
   position: relative;
@@ -160,19 +213,19 @@
   margin-left: 4px;
 }
 
-.vacation-house-card__number {
+.vacation-house-card__number,
+.vacation-house-map-card__number {
+  align-items: center;
+  background: #DBE6FE;
+  border-radius: 6px;
+  bottom: 0;
+  color: #6F6F6F;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
   padding: 4px 8px;
   position: absolute;
   right: 0;
-  background: #DBE6FE;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  color: #6F6F6F;
 }
 
 .vacation-houses__map {
@@ -185,6 +238,7 @@
   flex-grow: 1;
   height: 300px;
   order: 1;
+  position: relative;
 }
 
 @media screen and (min-width: 736px) {

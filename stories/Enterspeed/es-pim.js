@@ -23,7 +23,7 @@ export default function EsPim({ EsPimData }) {
     return (
       <VacationCard
         key={index.toString()}
-        img={image}
+        image={image}
         headline={headline}
         address={address}
         lead={lead}
@@ -43,7 +43,12 @@ export default function EsPim({ EsPimData }) {
             {VacationHouseList}
           </div>
           <div className='vacation-houses__map'>
-
+            <VacationMapCard
+              image={VacationHouses[0][0].image}
+              headline={VacationHouses[0][0].headline}
+              address={VacationHouses[0][0].address}
+              number={VacationHouses[0][0].number}
+            />
           </div>
       </div>
     </>
@@ -56,7 +61,7 @@ class VacationCard extends React.Component {
         <article className="vacation-house-card">
           <div className={this.props.favourite == 0 ? "vacation-house-card__fav-icon--active" : "vacation-house-card__fav-icon"}></div>
           <div className="vacation-house-card__image">
-            <img src={"/vacation-houses/" + this.props.img} />
+            <img src={"/vacation-houses/" + this.props.image} />
           </div>
           <section className="vacation-house-card__content">
             <header className="vacation-house-card__header">
@@ -69,6 +74,27 @@ class VacationCard extends React.Component {
               <span className="vacation-house-card__price">{this.props.price}</span>
               <span className="vacation-house-card__stay-type">/ {this.props.stayType}</span>
               <span className="vacation-house-card__number">{this.props.number}</span>
+            </footer>
+          </section>
+        </article>
+    )
+  }
+}
+
+class VacationMapCard extends React.Component {
+  render() {
+    return(
+        <article className="vacation-house-map-card">
+          <div className="vacation-house-map-card__image">
+            <img src={"/vacation-houses/thumbnail-" + this.props.image} />
+          </div>
+          <section className="vacation-house-map-card__content">
+            <header className="vacation-house-map-card__header">
+              <h2 className="vacation-house-map-card__headline">{this.props.headline}</h2>
+              <h3 className="vacation-house-map-card__address">{this.props.address}</h3>
+            </header>
+            <footer className="vacation-house-map-card__footer">
+              <span className="vacation-house-map-card__number">{this.props.number}</span>
             </footer>
           </section>
         </article>
