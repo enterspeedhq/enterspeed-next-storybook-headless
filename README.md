@@ -41,6 +41,8 @@ Open the localhost URL in your browser and navigate to the Enterspeed examples.
 
 Taking it further, there is a brand new (April 2022) plugin for Figma that allows designers to view Storybook stories directly in the design file. Besides allowing designers to be in sync with production, combined with real data, this this provides the designer with data documentation at hand.
 
+https://www.chromatic.com/docs/figma
+
 ## Inspiration and links
 This is just the tip of the iceberg – the possibilities are many, but from our perspective working with real data during your design and development process is a gamechanger!
 
